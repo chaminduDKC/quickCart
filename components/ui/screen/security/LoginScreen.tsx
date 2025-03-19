@@ -1,11 +1,11 @@
-import {Text, View, ScrollView, Image, StyleSheet, TouchableOpacity} from "react-native";
+import {Text, View, ScrollView, Image, StyleSheet, TouchableOpacity, Alert} from "react-native";
 import {COLORS} from "@/constants/ColorPalette";
 import {Icon, TextInput} from "react-native-paper";
 import {useState} from "react";
 
 
 const logo = require('../../../../assets/images/logo/logo.png')
-export default function LoginScreen(){
+export default function LoginScreen({navigation}:any){
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
     const [showPassword, setShowPassword] = useState(false)
@@ -63,9 +63,7 @@ export default function LoginScreen(){
                     </TouchableOpacity>
                 </View>
 
-
-
-                <TouchableOpacity style={styles.registerWithEmail}>
+                <TouchableOpacity onPress={()=> {navigation.navigate('SignUp')} } style={styles.registerWithEmail}>
                     <Text style={styles.loginText}>Register with email</Text>
                 </TouchableOpacity>
             </View>

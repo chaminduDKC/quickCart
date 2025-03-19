@@ -59,7 +59,6 @@ export default function HomeBottomTabNavigation({navigation}:any){
                                 </TouchableOpacity>
                             )
                         }}
-
             />
             <Tab.Screen name={'Bookmarks'} component={HomeBookmarkScreen}/>
             <Tab.Screen name={'Products'} component={HomeProductsScreen}/>

@@ -9,6 +9,9 @@ import NotificationsScreen from "@/components/ui/screen/other/NotificationsScree
 import ProfileScreen from "@/components/ui/screen/other/ProfileScreen";
 import VouchersScreen from "@/components/ui/screen/other/VouchersScreen";
 import LoginScreen from "@/components/ui/screen/security/LoginScreen";
+import SighUpScreen from "@/components/ui/screen/security/SighUpScreen";
+import RegisteredEmailVerifyScreen from "@/components/ui/screen/security/RegisteredEmailVerifyScreen";
+import OrderTopTabNavigation from "@/app/navigation/tab-navigation/OrderTopTabNavigation";
 const Stack = createStackNavigator();
 
 const config = {
@@ -36,13 +39,14 @@ export default function StackNavigator(){
             <Stack.Screen name={'CustomerCare'} options={{title:"Customer Care"}} component={CustomerCareScreen}/>
             <Stack.Screen name={'DailyDeals'} options={{title:"Daily Deals"}} component={DailyDealScreen}/>
             <Stack.Screen name={'LatestProducts'} options={{title:"Latest Products"}} component={LatestProductsScreen}/>
-            <Stack.Screen name={'MyOrders'} options={{title:"My Orders"}} component={MyOrderScreen}/>
+            <Stack.Screen name={'MyOrders'} options={{title:"My Orders"}} component={OrderTopTabNavigation}/>
             <Stack.Screen name={'Notifications'} options={{title:"Notifications"}} component={NotificationsScreen}/>
             <Stack.Screen name={'Profile'} options={{title:"Profile"}} component={ProfileScreen}/>
             <Stack.Screen name={'Vouchers'} options={{title:"Vouchers"}} component={VouchersScreen}/>
 
             <Stack.Screen name={'Login'} options={{title:"Login Here"}} component={LoginScreen}/>
-
+            <Stack.Screen name={'SignUp'} options={{title:"Sign Up here"}} component={SighUpScreen}/>
+            <Stack.Screen name={'RegisteredEmailVerify'} options={{title:"Verify your Email"}} component={RegisteredEmailVerifyScreen}/>
 
         </Stack.Navigator>
     )

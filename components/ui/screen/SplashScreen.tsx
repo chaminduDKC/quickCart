@@ -10,7 +10,7 @@ export default function SplashScreen({onFinished}:any) {
     useEffect(()=>{
         Animated.timing(progress, {
             toValue:100,
-            duration:3000,
+            duration:1000,
             useNativeDriver: false,
         }).start(()=>{
             onFinished();
